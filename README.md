@@ -2,7 +2,7 @@
 
 Neo-Test is a Visual Studio VSIX extension that brings test results and code coverage into the editor. It watches a solution-relative results directory, reads coverage reports as they arrive, and marks the corresponding source lines.
 
-The extension targets the Visual Studio 17.x extensibility API (Visual Studio 2022 and later) and is built on .NET Framework 4.7.2.
+The extension targets the Visual Studio 17.x extensibility API (Visual Studio 2022 and later) and is built on .NET Framework 4.8.1.
 
 ## Why Neo-Test?
 
@@ -19,7 +19,7 @@ The diagram is an illustration of the implemented UI, not a captured Visual Stud
 | Requirement | Details |
 | --- | --- |
 | Host | Visual Studio compatible with the 17.x extensibility API on Windows. |
-| To build from source | Visual Studio with the **Visual Studio extension development** workload and the .NET Framework 4.7.2 targeting pack. |
+| To build from source | Visual Studio with the **Visual Studio extension development** workload and the .NET Framework 4.8.1 targeting pack. |
 | To consume reports | Cobertura or OpenCover XML; TRX is optional and supplies failed-test locations. |
 | Changed-line coverage | Git is required only when using the Changed filter or diff-base setting. |
 
@@ -55,7 +55,7 @@ By default the results directory is `TestResults` below the solution directory. 
 1. Install Visual Studio with the **Visual Studio extension development** workload.
 2. Open [NeoTest.slnx](NeoTest.slnx).
 3. Restore and build the `NeoTest` project.
-4. Install the generated VSIX, normally at `src/bin/<Configuration>/net472/Neo-Test.vsix`.
+4. Install the generated VSIX, normally at `src/bin/<Configuration>/net481/Neo-Test.vsix`.
 5. Restart Visual Studio if prompted, then open a solution to begin watching its results directory.
 
 Package versions are centrally managed in [Directory.Packages.props](Directory.Packages.props).

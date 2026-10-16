@@ -5,7 +5,7 @@ Thanks for contributing. Before proposing a change, please keep the extension's 
 ## Local setup
 
 1. Install Visual Studio with the **Visual Studio extension development** workload.
-2. Install the .NET Framework 4.7.2 targeting pack if it is not already available.
+2. Install the .NET Framework 4.8.1 targeting pack if it is not already available.
 3. Restore packages and build from the repository root:
 
 ```powershell
@@ -13,7 +13,7 @@ dotnet restore NeoTest.slnx
 dotnet build NeoTest.slnx --no-restore
 ```
 
-The build produces `src/bin/<Configuration>/net472/Neo-Test.vsix`.
+The build produces `src/bin/<Configuration>/net481/Neo-Test.vsix`.
 
 ## Before submitting a change
 
