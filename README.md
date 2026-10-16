@@ -140,4 +140,4 @@ This repository currently provides a source build; it does not include a Visual 
 
 Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the local build and validation workflow.
 
-No license file is currently included. Add an explicit `LICENSE` before redistributing the extension or accepting third-party contributions under defined terms.
+Neo-Test is licensed under the [GNU General Public License v3.0](LICENSE).
