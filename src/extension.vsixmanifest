@@ -1,0 +1,19 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="NeoTest.2bdfac17-2c17-4a9c-bf39-a7a917132238" Version="1.0" Language="en-US" Publisher="Neo-Test" />
+    <DisplayName>Neo-Test</DisplayName>
+    <Description xml:space="preserve">Shows customizable test coverage, failures, and quality gates directly in Visual Studio.</Description>
+    <Icon>Resources\NeoTest.png</Icon>
+  </Metadata>
+  <Installation>
+    <!-- VS 2026 evaluates the supported API lower-bound.  No upper bound keeps this VSIX eligible for VS 2026 and later. -->
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,)" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.VisualStudio.MPF.17.0" DisplayName="Visual Studio MPF 17.0" d:Source="Manual" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema/2010" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="NeoTest" Path="NeoTest.pkgdef" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema/2010" />
+    <Asset Type="Microsoft.VisualStudio.Services.Icons.Default" d:Source="File" Path="Resources\NeoTest.png" d:VsixSubPath="Resources" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema/2010" />
+  </Assets>
+</PackageManifest>

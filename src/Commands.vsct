@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Commands package="guidCodeCoveragePackage">
+    <Groups>
+      <Group guid="guidCodeCoverageCmdSet" id="CoverageGroup" priority="0x0600"><Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" /></Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidCodeCoverageCmdSet" id="ClearCoverage" priority="0x0100" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Clear Neo-Test Coverage</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="OpenCoverageDetails" priority="0x0101" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Open Neo-Test Coverage Details</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="RunTestsWithCoverage" priority="0x0102" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Run Tests with Coverage</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="NextUncoveredLine" priority="0x0103" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Next Uncovered Line</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="NextFailedLine" priority="0x0104" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Next Failed-Test Line</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="ExportCoverage" priority="0x0105" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Export Coverage Report…</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="CancelTestsWithCoverage" priority="0x0106" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Cancel Tests with Coverage</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="RunTestsForCurrentFile" priority="0x0107" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Run Tests for Current File</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="RefreshCoverage" priority="0x0108" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Refresh Neo-Test Coverage</ButtonText></Strings></Button>
+      <Button guid="guidCodeCoverageCmdSet" id="OpenSettings" priority="0x0109" type="Button"><Parent guid="guidCodeCoverageCmdSet" id="CoverageGroup" /><Strings><ButtonText>Open Neo-Test Settings</ButtonText></Strings></Button>
+    </Buttons>
+  </Commands>
+  <KeyBindings>
+    <KeyBinding guid="guidCodeCoverageCmdSet" id="NextUncoveredLine" editor="guidVSStd97" key1="CTRL+ALT+U" />
+    <KeyBinding guid="guidCodeCoverageCmdSet" id="NextFailedLine" editor="guidVSStd97" key1="CTRL+ALT+F" />
+  </KeyBindings>
+  <Symbols>
+    <GuidSymbol name="guidCodeCoveragePackage" value="{8365EAB7-D97D-4710-B2B0-4E6A970960A1}" />
+    <GuidSymbol name="guidCodeCoverageCmdSet" value="{3A9731DD-3D8C-4206-9D0B-5EAF0C4137D5}"><IDSymbol name="CoverageGroup" value="0x1020" /><IDSymbol name="ClearCoverage" value="0x0100" /><IDSymbol name="OpenCoverageDetails" value="0x0101" /><IDSymbol name="RunTestsWithCoverage" value="0x0102" /><IDSymbol name="NextUncoveredLine" value="0x0103" /><IDSymbol name="NextFailedLine" value="0x0104" /><IDSymbol name="ExportCoverage" value="0x0105" /><IDSymbol name="CancelTestsWithCoverage" value="0x0106" /><IDSymbol name="RunTestsForCurrentFile" value="0x0107" /><IDSymbol name="RefreshCoverage" value="0x0108" /><IDSymbol name="OpenSettings" value="0x0109" /></GuidSymbol>
+  </Symbols>
+</CommandTable>

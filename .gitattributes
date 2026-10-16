@@ -1,0 +1,2 @@
+# Keep working-tree text files in the Windows-native line-ending convention.
+* text=auto eol=crlf

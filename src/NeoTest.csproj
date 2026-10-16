@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseWpf>true</UseWpf>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <VSIXSourceManifest>source.extension.vsixmanifest</VSIXSourceManifest>
+    <!-- Microsoft.VsSDK.targets is imported before the SDK finalizes IntermediateOutputPath. -->
+    <ResourceManifest>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\resources.json</ResourceManifest>
+    <FileManifest>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\files.json</FileManifest>
+    <TemplateFileManifest>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\templateFiles.json</TemplateFileManifest>
+    <CtoFileManifest>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\ctoFiles.json</CtoFileManifest>
+    <CtoCacheFile>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\mergeCto.cache</CtoCacheFile>
+    <CreateTemplateManifestsCacheFile>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\createTemplateManifests.cache</CreateTemplateManifestsCacheFile>
+    <TemplateOutputDirectory>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\</TemplateOutputDirectory>
+    <IntermediateVsixManifest>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\extension.vsixmanifest</IntermediateVsixManifest>
+    <TargetVsixContainer>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\Neo-Test.vsix</TargetVsixContainer>
+    <CreatePkgDefAssemblyToProcess>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\NeoTest.dll</CreatePkgDefAssemblyToProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading" />
+    <PackageReference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Design" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="Commands.vsct" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\NeoTest.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(PkgMicrosoft_VSSDK_BuildTools)\tools\vssdk\Microsoft.VsSDK.targets"
+          Condition="Exists('$(PkgMicrosoft_VSSDK_BuildTools)\tools\vssdk\Microsoft.VsSDK.targets')" />
+  <Target Name="BuildVsix" AfterTargets="Build" DependsOnTargets="GeneratePkgDef;CreateVsixContainer" />
+</Project>
